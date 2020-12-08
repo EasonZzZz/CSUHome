@@ -1,0 +1,117 @@
+.pop {
+    position: fixed;
+    z-index: 99;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.pop .dialog {
+    position: relative;
+    background: white;
+    width: 60%;
+    height: 70%;
+    border-radius: 5px;
+    margin: 5% auto;
+    opacity: 1.0;
+}
+
+.dialog .title {
+    position: relative;
+    padding: 0 20px;
+    background-color: #f4f5f9;
+    background-image: linear-gradient(to bottom, #f4f5f9 0, #f4f5f9 100%);
+    border-bottom: 1px solid #e7e7eb;
+    text-align: center;
+    height: 10%;
+    border-radius: 5px 5px 0 0;
+}
+
+.dialog .title span {
+    font-size: 18px;
+    line-height: 50px;
+}
+
+.dialog .content {
+    padding: 5%;
+    overflow: hidden;
+    height: 80%;
+}
+
+.dialog .title .closeIcon {
+    position: absolute;
+    top: 50%;
+    margin-top: -8px;
+    right: 20px;
+    width: 16px;
+    height: 16px;
+    line-height: 999em;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.dialog .footer {
+    padding: 5px 100px;
+    background-color: #f4f5f9;
+    background-image: linear-gradient(to bottom, #f4f5f9 0, #f4f5f9 100%);
+    border-bottom: 1px solid #e7e7eb;
+    text-align: center;
+    border-radius: 0 0 5px 5px;
+    height: 10%;
+}
+
+.dialog .footer button {
+    font-size: 12px;
+    display: inline-block;
+    height: 100%;
+    border: 1px solid;
+    border-radius: 25px;
+    outline: 0;
+    overflow: hidden;
+    padding: 0 22px;
+    width: 33%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+#forgetPop .content {
+    text-align: center;
+    font-size: 18px;
+    padding-top: 10%;
+}
+
+#forgetPop .content  tr td{
+    text-align: center;
+    padding-top: 15px;
+    color: #747474;
+    width: 100%;
+}
+
+#forgetPop .content .input-txt {
+    border: 1px #a8a8a8 solid;
+    width: 260px;
+    height: 42px;
+    outline: none;
+    display: inline-block;
+    background: #FFF;
+    position: relative;
+}
+
+#forgetPop .content .input-txt input {
+    width: 210px;
+    height: 40px;
+    line-height: 40px;
+    margin-top: 2px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    color: #999999;
+    background: none;
+}
+#forgetPop .content .verification {
+    width: 50%;
+    transform:translateY(-11px);
+}
+

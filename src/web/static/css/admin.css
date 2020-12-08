@@ -1,0 +1,477 @@
+/*总*/
+#total
+{
+    width: 1200px;
+    margin: 0 auto;
+    background-color: #f0ece9;
+    border-top: 8px #f0ece9 solid;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/*第一行（学生管理系统那一行）*/
+#top
+{
+    height: 40px;
+}
+/*学生管理系统那一行的黄线*/
+.headerLine
+{
+    width: 400px;
+    display: inline;
+    color: #c3a080;
+    font-size: 24px;
+    padding: 40px;
+}
+/*学生管理系统那几个字*/
+#header
+{
+    width: 300px;
+    display: inline;
+    color: #9ea09e;
+    font-size: 24px;
+}
+
+/*第二行（按钮那一行）*/
+#second
+{
+    height: 40px;
+    text-align: left;
+}
+
+/*第三行（主体）*/
+/*表头*/
+#main thead
+{
+    text-align: center;
+}
+#main thead tr
+{
+    background-color: #dadee1;
+    height: 40px;
+}
+/*表主体*/
+.mainTbodyTr1
+{
+    height: 30px;
+    background-color: white;
+    text-align: center;
+}
+.mainTbodyTr2
+{
+    height: 30px;
+    background-color: #eef1f8;
+    text-align: center;
+}
+/*第一列*/
+.col1
+{
+    width: 50px;
+}
+/*第二列*/
+.col2
+{
+    width: 60px;
+}
+/*第三列*/
+.col3
+{
+    width: 120px;
+}
+/*第四列*/
+.col4
+{
+    width: 120px;
+}
+/*第五列*/
+.col5
+{
+    width: 160px;
+}
+/*第六列*/
+.col6
+{
+    width: 160px;
+}
+/*第七列*/
+.col7
+{
+    width: 80px;
+}
+/*第八列*/
+.col8
+{
+    width: 120px;
+}
+/*第九列*/
+.col9
+{
+    width: 160px;
+}
+/*第十列*/
+.col10
+{
+    width: 160px;
+}
+#final
+{
+    margin-top: 15px;
+    height: 40px;
+}
+#final p
+{
+    display: inline;
+}
+
+#totalBackground{
+    width: 100%;
+    height: 100%;
+    /*border: 1px solid #dadee1;*/
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #c4c2c1;
+    z-index:1;
+    /*-moz-opacity: 0.8;*/
+    opacity:.8;
+    /*filter: alpha(opacity=88);*/
+}
+
+/*新增框架*/
+#addBlock
+{
+    width: 420px;
+    height: 400px;
+    display: none;
+    position: absolute;
+    top: 15%;
+    left: 35%;
+    background-color: white;
+    border-radius: 5px;
+    z-index:2;
+    /*overflow: auto;*/
+}
+/*新增框架头*/
+#addHeader
+{
+    background-color: black;
+    color: white;
+    font-family: 黑体;
+    font-weight: bold;
+    height: 30px;
+    padding-left: 10px;
+    padding-top: 10px;
+    /*display: table-row;*/
+}
+/*新增框架主体*/
+#addMain
+{
+    height: 290px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #dadee1;
+}
+#addMain table
+{
+    width: 400px;
+}
+#addMain tr
+{
+    height: 40px;
+}
+.addTableTd1
+{
+    padding-left: 15px;
+    width: 120px;
+    text-align: right;
+}
+.addTableTd2
+{
+    padding-left: 20px;
+    width: 250px;
+    text-align: left;
+}
+.addTableTd2 input
+{
+    width: 150px;
+}
+
+/*删除框架*/
+#delBlock
+{
+    width: 420px;
+    height: 400px;
+    display: none;
+    position: absolute;
+    top: 15%;
+    left: 35%;
+    background-color: white;
+    border-radius: 5px;
+    z-index:2;
+    /*overflow: auto;*/
+}
+/*新增框架头*/
+#delHeader
+{
+    background-color: black;
+    color: white;
+    font-family: 黑体;
+    font-weight: bold;
+    height: 30px;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+/*新增框架主体*/
+#delMain
+{
+    height: 280px;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #dadee1;
+}
+#delMain p
+{
+    font-size: 20px;
+}
+#delMessage
+{
+    font-size: 20px;
+}
+
+/*查看框架*/
+#examineBlock
+{
+    width: 420px;
+    height: 400px;
+    display: none;
+    position: absolute;
+    top: 15%;
+    left: 35%;
+    background-color: white;
+    border-radius: 5px;
+    z-index:2;
+    /*overflow: auto;*/
+}
+
+/*新增框架头*/
+#examineHeader
+{
+    background-color: black;
+    color: white;
+    font-family: 黑体;
+    font-weight: bold;
+    height: 30px;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+/*新增框架主体*/
+#examineMain
+{
+    height: 290px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #dadee1;
+}
+#examineMain table
+{
+    width: 400px;
+}
+#examineMain tr
+{
+    height: 40px;
+}
+.examineTableTd1
+{
+    padding-left: 15px;
+    width: 120px;
+    text-align: right;
+}
+.examineTableTd2
+{
+    padding-left: 20px;
+    width: 250px;
+    text-align: left;
+}
+.examineTableTd2 input
+{
+    color: #545454;
+    width: 150px;
+    background-color: #ebebe4;
+    border: 1px solid #a9a9a9;
+}
+
+/*修改框架*/
+#updateBlock
+{
+    width: 420px;
+    height: 400px;
+    display: none;
+    position: absolute;
+    top: 15%;
+    left: 35%;
+    background-color: white;
+    border-radius: 5px;
+    z-index:2;
+    /*overflow: auto;*/
+}
+
+/*新增框架头*/
+#updateHeader
+{
+    background-color: black;
+    color: white;
+    font-family: 黑体;
+    font-weight: bold;
+    height: 30px;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+/*新增框架主体*/
+#updateMain
+{
+    height: 290px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #dadee1;
+}
+#updateMain table
+{
+    width: 400px;
+}
+#updateMain tr
+{
+    height: 40px;
+}
+.updateTableTd1
+{
+    padding-left: 15px;
+    width: 120px;
+    text-align: right;
+}
+.updateTableTd2
+{
+    padding-left: 20px;
+    width: 250px;
+    text-align: left;
+}
+.updateTableTd2 input
+{
+    width: 150px;
+}
+
+#add     /*新增*/
+{
+    height: 30px;
+    width: 75px;
+    background-color: #5cb85c;
+    color: white;
+    border: 1px solid black;
+}
+#del     /*删除*/
+{
+    height: 30px;
+    width: 75px;
+    background-color: #d9534f;
+    color: white;
+    border: 1px solid black;
+    margin-left: 5px;
+}
+#previous     /*上一页*/
+{
+    height: 30px;
+    width: 75px;
+    background-color: #5cb85c;
+    color: white;
+    border: 1px solid black;
+    float: right;
+}
+#next     /*下一页*/
+{
+    height: 30px;
+    width: 75px;
+    background-color: #d9534f;
+    color: white;
+    border: 1px solid black;
+    margin-left: 5px;
+    float: right;
+}
+#examine     /*查看*/
+{
+    font-size: 16px;
+    height: 20px;
+    border: none;
+    color: red;
+    background: none;
+    /*background-color: #eef1f8;*/
+}
+#update     /*修改*/
+{
+    font-size: 16px;
+    height: 20px;
+    border: none;
+    color: red;
+    background: none;
+    /*background-color: #eef1f8;*/
+}
+#submit     /*提交*/
+{
+    height: 30px;
+    width: 75px;
+    background-color: #5cb85c;
+    color: black;
+    border: 1px solid #dadee1;
+}
+#addCancel     /*新增中的取消*/
+{
+    height: 30px;
+    width: 75px;
+    background-color: white;
+    color: black;
+    border: 1px solid #dadee1;
+    margin-left: 5px;
+}
+#preservation     /*保存*/
+{
+    height: 30px;
+    width: 75px;
+    background-color: #5cb85c;
+    color: black;
+    border: 1px solid #dadee1;
+}
+#updateCancel     /*修改中的取消*/
+{
+    height: 30px;
+    width: 75px;
+    background-color: white;
+    color: black;
+    border: 1px solid #dadee1;
+    margin-left: 5px;
+}
+#examineCancel     /*修改中的取消*/
+{
+    height: 30px;
+    width: 75px;
+    background-color: white;
+    color: black;
+    border: 1px solid #dadee1;
+    /*margin-left: 5px;*/
+}
+#confirm     /*确认*/
+{
+    height: 30px;
+    width: 75px;
+    background-color: #5cb85c;
+    color: black;
+    border: 1px solid #dadee1;
+}
+#delCancel     /*删除中的取消*/
+{
+    height: 30px;
+    width: 75px;
+    background-color: white;
+    color: black;
+    border: 1px solid #dadee1;
+    margin-left: 5px;
+}

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+        <meta name="keywords" content="中南大学">
+        <meta name="description" content="中南大学信息门户">
+        <meta name="author" content="Eason0">
+        <title>中南大学</title>
+
+        <link rel="stylesheet" href="static/css/reset.css">
+        <link rel="stylesheet" href="static/css/style.css">
+        <link rel="stylesheet" href="static/css/pop.css">
+        <script src="static/js/login/front.js"></script>
+        <script src="static/js/login/captcha.js"></script>
+        <script src="static/js/common/ajax.js"></script>
+        <script src="static/js/login/login.js"></script>
+        <script src="static/js/login/forget.js"></script>
+        <script src="static/js/login/base.js"></script>
+    </head>
+
+    <body>
+        <!-- 主要登录部分 -->
+        <div class="wrapper">
+            <!-- Top Start -->
+            <div class="top">
+                <div class="logo"><a href="#"><img src="static/images/logo_03.png" alt=""></a></div>
+                <div class="links">
+                    <a href="http://ca.its.csu.edu.cn/Home/Login/78" target="_blank">教学可视化</a>
+                    <a href="static/中南大学信息门户账号申请表.docx">账号申请</a>
+                    <a href="http://app.its.csu.edu.cn/index.html" target="_blank">中南e行</a>
+                    <a href="#" onclick="document.getElementById('adminPop').style.display='block'">管理员</a>
+                </div>
+            </div>
+            <!-- Top End -->
+            
+            <!-- Center Start -->
+            <div class="center">
+                <div class="slide-banner">
+                    <div class="banner">
+                        <img src="static/images/2018_4.png" id="img-now" class="banner-pic" alt=""/>
+                        <img src="static/images/2.jpg" class="banner-pic" alt=""/>
+                        <img src="static/images/3.jpg" class="banner-pic" alt=""/>
+                        <img src="static/images/1.jpg" class="banner-pic" alt=""/>
+                    </div>
+
+                    <div class="banner-id" id="banner-id">
+                        <ul>
+                            <li id="dot-now"></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="login-box">
+                    <div class="login-tab">
+                        <ul class="tab-title" id="tab-title">
+                            <li class="selected" id="loginByPwd">账号密码登录</li>
+                            <li class="" id="loginByMsgCode">手机登录</li>
+                        </ul>
+
+                        <div class="tab-content" id="tab-content">
+                            <div class="tabbox" style="display: block">
+                                <table class="login-table">
+                                    <tr>
+                                        <td colspan="3">
+                                            <span class="input-txt">
+                                                <img src="static/images/icon_08.png" alt="">
+                                                <input id="userId" type="text" value="" placeholder="学工号">
+                                            </span>
+                                        </td>                                        
+                                    </tr>
+
+                                    <tr>
+                                        <td colspan="3">
+                                            <span class="input-txt">
+                                                <img src="static/images/icon_11.png" alt="">
+                                                <input id="password" type="password" class="" placeholder="密码">
+                                            </span>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td colspan="2">
+                                            <span>
+                                                <input class="verification" id="pwd-captcha" type="text" value="" placeholder="图形验证码">
+                                            </span>
+                                        </td>
+                                        <td>
+                                            <canvas class="captcha" onclick="drawCaptcha()" width="112px" height="33px"></canvas>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="remember" colspan="2">
+                                            <label style="color: #444;"><input id="remember" type="checkbox" value="">&nbsp;记住账号</label>
+                                        </td>
+                                        <td class="forgetPassword" >
+                                            <a href="#" id="forgetPassword" onclick="document.getElementById('forgetPop').style.display='block'">忘记密码</a>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td colspan="3">
+                                            <span class="loginBtn">
+                                                <button type="button" id="loginBtn" onclick="checkLogin()">登录</button>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+
+                            <div class="tabbox" style="display: none;">
+                                <table class="login-table">
+                                    <tr>
+                                        <td colspan="3">
+                                            <span class="input-txt">
+                                                <img src="static/images/icon_08.png" alt="">
+                                                <input id="userPhone" type="text" value="" placeholder="手机号">
+                                            </span>
+                                        </td>                                        
+                                    </tr>
+
+                                    <tr>
+                                        <td colspan="2">
+                                            <span>
+                                                <input class="verification" id="msg-captcha" type="text" value="" placeholder="图形验证码">
+                                            </span>
+                                        </td>
+                                        <td>
+                                            <canvas class="captcha" onclick="drawCaptcha()" width="112px" height="33px"></canvas>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td colspan="2">
+                                            <span>
+                                                <input id="msgCode" class="msgCode verification" type="text" value="" placeholder="短信验证码">
+                                            </span>
+                                        </td>
+                                        <td>
+                                            <button class="getMsgCode" type="button" onclick="getMsgCode(this, ($('userPhone').value).trim())">获取验证码</button>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td colspan="3" style="padding-top: 30px;">
+                                            <span class="loginBtn">
+                                                <button type="button"  onclick="checkLogin()">登录</button>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Center End -->
+
+            
+            <!-- Footer Start-->
+            <div class="footer">
+                <p>版权所有 © 2015 中南大学信息与网络中心. 保留所有权利<span>技术支持：0731-88877844&nbsp;&nbsp;邮箱地址：app@csu.edu.cn</span></p>
+            </div>
+            <!-- Footer End-->
+        </div>
+
+        <!-- 忘记密码弹窗 -->
+        <div class="pop" id="forgetPop" style="display: none;">
+            <div class="dialog">
+                <div class="title">
+                    <span>忘记密码</span>
+                    <img class="closeIcon" src="static/images/closeIcon.png" alt="" onclick="closePop('forget')">
+                </div>
+
+                <div class="content">
+                    <table id="forget-table" class="forget-table" style="display: inline-block">
+                        <tr>
+                            <td colspan="3">
+                                <span class="input-txt">
+                                    <input id="forgetId" type="text" value="" placeholder="学工号">
+                                </span>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td colspan="3">
+                                <span class="input-txt">
+                                    <input id="forgetPhone" type="text" class="" placeholder="手机号">
+                                </span>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td colspan="3">
+                                <input class="verification" id="forget-captcha" type="text" value="" placeholder="图形验证码">
+                                <canvas class="captcha" onclick="drawCaptcha()" width="112px" height="33px"></canvas>
+                            </td>
+                        </tr>
+
+                        <tr style="transform:translateY(-11px);">
+                            <td colspan="3">
+                                <input id="forget-msgCode" class="msgCode verification" type="text" value="" placeholder="短信验证码" style="transform:translateY(0px);">
+                                <button class="getMsgCode" type="button" onclick="forgetMsg(this)" style="margin-left: 0">获取验证码</button>
+                            </td>
+                        </tr>
+                    </table>
+                    <table id="change-table" class="change-table" style="display: none">
+                        <tr>
+                            <td colspan="3">
+                                <span class="input-txt">
+                                    <input id="newPwd1" type="password" value="" placeholder="新密码">
+                                </span>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td colspan="3">
+                                <span class="input-txt">
+                                    <input id="newPwd2" type="password" class="" placeholder="重复密码">
+                                </span>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="footer">
+                    <button id="forget-next" class="next" onclick="nextStep()">下一步</button>
+                    <button class="cancel" onclick="closePop('forget')">取消</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 管理员弹窗 -->
+        <div class="pop" id="adminPop" style="display: none">
+            <div class="dialog">
+                <div class="title">
+                    <span>管理员登录</span>
+                    <img class="closeIcon" src="static/images/closeIcon.png" alt="" onclick="closePop('admin')">
+                </div>
+
+                <div class="content" style="text-align: center;font-size: 18px">
+                    <div style="margin: 10%;"><label><strong>账号：</strong><input type="text" id="adminId"></label></div>
+                    <div><label><strong>密码：</strong><input type="password" id="adminPwd"></label></div>
+                    <script>
+                        $("adminPwd").onkeypress = function (e) {
+                            if (e.key === "Enter") {
+                                adminLogin();
+                            }
+                        }
+                    </script>
+                </div>
+
+                <div class="footer">
+                    <button class="login" onclick="adminLogin()">登录</button>
+                    <button class="cancel" onclick="closePop('admin')">取消</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 错误弹窗 -->
+        <div class="error" id="error" style="display: block">
+            <div class="errMsg">
+                <p id="errMsg"></p>
+            </div>
+        </div>
+    </body>
+</html>

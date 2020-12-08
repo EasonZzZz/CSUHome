@@ -1,0 +1,75 @@
+blockquote,
+body,
+dd,
+div,
+dl,
+dt,
+fieldset,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+li,
+ol,
+p,
+pre,
+td,
+textarea,
+th,
+ul {
+    margin: 0;
+    padding: 0
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+abbr,
+acronym,
+fieldset,
+img {
+    border: 0
+}
+
+ol,
+ul {
+    list-style: none
+}
+
+caption,
+th {
+    text-align: left
+}
+
+q:after,
+q:before {
+    content: ''
+}
+
+dt span {
+    float: right
+}
+
+body {
+    font: 12px/1.5 "Microsoft Yahei";
+    color: #444;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+a {
+    text-decoration: none;
+    color: #444;
+    transition: .3s
+}
+
+* {
+    outline: 0;
+    box-sizing: border-box
+}
